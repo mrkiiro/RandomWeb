@@ -7,11 +7,38 @@
     <title>Hello World2</title>
 </head>
 <body>
-    <h1>Did things</h1>
-    <h2>IT WORKS! Wicked</h2>
-    <p>I saved some text</p>
+    
 
-    <a href="smartienfart.html"> hvorfor er der ikke et link her</a>
+    <div class="container">
+        
+        <div class="parallax-container">
+            <div class="parallax"><img src="img.jpg" alt="some header image"></div>
+        </div>
+
+        <div class="section white">
+            <div class="row container">
+                <h2 class="header">Some random heading</h2>
+                <p>Also some random text</p>
+            </div>
+        </div>
+        
+        <div class="parallax-container">
+            <div class="parallax"><img src="img.jpg" alt="some header image"></div>
+        </div>
+
+    </div>
+
+    <!-- Materialize from google -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- /Materialize from google -->
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(elems, options);
+    });
+    </script>
 
 </body>
 </html>

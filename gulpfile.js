@@ -4,11 +4,11 @@ browsersync = require('browser-sync').create();
 gulp.task('default', async function(){
     browsersync.init({
         server: {
-            baseDir: "dist/"
+            baseDir: "dist/html/"
         }
     });
 
-    gulp.watch('./dev/*').on('change', gulp.series('build', 'reload'));
+    gulp.watch('./dev/*').on('change', gulp.series('buildHtml', 'reload'));
 });
 
 gulp.task('reload', function(){
@@ -16,7 +16,7 @@ gulp.task('reload', function(){
 })
 
 
-gulp.task('build', function(){
+gulp.task('buildHtml', function(){
     return gulp.src('dev/*.html')
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('dist/html/'));
 });
